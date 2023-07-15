@@ -1,10 +1,10 @@
 function solution(n) {
-    let arr = []
-    let num = 3
+    const arr = []
+    const num = 3
     
     while(n !== 0) {
         arr.push(n % num)
-        n = Math.floor(n / 3)
+        n = Math.floor(n / num)
     }
     arr.reverse()
     
