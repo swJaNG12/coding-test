@@ -9,7 +9,7 @@ function solution(par, com) {
 
 function createObj(arr) {
     return obj = arr.reduce((acc, cur) => {
-        acc[cur] = (acc[cur] || 0) + 1
+        acc[cur] = (acc[cur] ?? 0) + 1
         return acc
     }, {})
 }
