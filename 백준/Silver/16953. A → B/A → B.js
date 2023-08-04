@@ -7,13 +7,12 @@ let cnt = 0;
 while(b > a) {
   if(b % 2 === 0) {
     b /= 2;
-    cnt++;
   } else if(b % 10 === 1) {
     b = Math.floor(b/10);
-    cnt++;
   } else {
       break;
   }
+  cnt++;
 }
 
-a === b ? console.log(cnt+1) : console.log(-1)
+a === b ? console.log(cnt+1) : console.log(-1);
