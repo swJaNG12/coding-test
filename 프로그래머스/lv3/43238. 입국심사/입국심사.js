@@ -5,7 +5,7 @@ function solution(n, times) {
         let mid = parseInt((left+right)/2);
         const cnt = times.reduce((a, c) => {
             return a += parseInt(mid / c);
-        }, 0)
+        }, 0);
 
         if(cnt < n) left = mid + 1;
         else right = mid - 1;
