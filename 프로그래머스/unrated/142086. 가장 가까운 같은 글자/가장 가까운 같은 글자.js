@@ -8,3 +8,5 @@ function solution(s) {
     })
     return result;
 }
+
+// 배열의 includes, lastIndexOf를 사용하는 것보다 시간복잡도 측면에서 더 빠르다.
