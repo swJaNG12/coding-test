@@ -1,10 +1,9 @@
 function solution(numbers) {
-    let re = []
-    for(let i = 0; i < numbers.length; i++) {
-        for(let j = i + 1; j < numbers.length; j++) {
-            re.push(numbers[i] + numbers[j])
+    let set = new Set()
+    for(let i = 0; i < numbers.length-1; i++) {
+        for(let j = i+1; j < numbers.length; j++) {
+            set.add(numbers[i] + numbers[j])
         }
     }
-    const set = new Set(re)
-    return [...set].sort((a,b) => a - b)
+    return [...set].sort((a,b) => a-b);
 }
