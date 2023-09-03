@@ -1,11 +1,4 @@
-function solution(food) {
-    let re = ''
-    for(let i = 1; i < food.length; i++) {
-        let cnt = Math.floor(food[i]/2) 
-        for(let j = 1; j <= cnt; j++) {
-            re += i
-        }
-    }
-    
-    return re + 0 + re.split('').reverse().join('')
+function solution (food) {
+  let half = food.map(n => ~~(n/2)).map((n,i) => i.toString().repeat(n)).join('');
+  return half + '0' + half.split('').reverse().join('')
 }
