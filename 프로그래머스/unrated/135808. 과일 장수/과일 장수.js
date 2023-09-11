@@ -1,10 +1,13 @@
-function solution(k,m,score) {
-  score = score.sort((a,b) => a-b);
-  let sum = 0;
+function solution(k, m, score) {
+    let answer = 0;
+    score.sort((a, b) => b - a);   
+    
+    let count = Math.floor(score.length / m);
 
-  while(score.length >= m) {
-    const box = score.splice(score.length-m);
-    sum += Math.min(...box) * m;
-  }
-  return sum;
+    for(let i=1; i<=count; i++) {
+    
+    answer += score[m*i-1] * m;
+        
+    }
+    return answer;
 }
