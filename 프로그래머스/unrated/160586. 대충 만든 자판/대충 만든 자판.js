@@ -14,7 +14,7 @@ function solution(keymap, targets) {
         if(touchCnt !== -1) cnt.push(touchCnt);
       }
 
-     if(cnt.includes(-1) || !cnt.length) {
+     if(!cnt.length) {
         sum = -1
         break;
       } else {
