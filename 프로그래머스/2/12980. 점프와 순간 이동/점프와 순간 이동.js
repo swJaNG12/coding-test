@@ -1,17 +1,17 @@
 function solution(n) {
-    let target = n;
-    let cnt = 0;
+    let currentPosition = n;
+    let batteryUsage = 0;
     
-    while(target > 0) {
-        const isEven = target % 2 === 0;
+    while(currentPosition > 0) {
+        const isEven = currentPosition % 2 === 0;
         
         if(isEven) {
-            target /= 2;
+            currentPosition /= 2;
         } else {
-            target -= 1;
-            cnt += 1;
+            currentPosition -= 1;
+            batteryUsage += 1;
         }
     }
     
-    return cnt;
+    return batteryUsage;
 }
